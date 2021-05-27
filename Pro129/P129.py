@@ -3,17 +3,17 @@ import pandas as pd
 
 data = pd.read_csv("dwarf.csv")
 
-data["Radius"] = 0.102763 * data["Radius"]
+data["Radius_1"] = 0.102763 * data["Radius_1"]
 
-print(data["Mass"])
-data["Mass"] = data["Mass"]. dropna()
-print(data["Mass"])
+print(data["Mass_1"])
+data["Mass_1"] = data["Mass_1"]. dropna()
+print(data["Mass_1"])
 
-data["Mass"] = data.Mass.astype(float)
-data["Mass"] = pd.to_numeric(data["Mass"], downcast='float')
-data["Mass"] = 0.000954588*data["Mass"]
+data["Mass_1"] = data.Mass_1.astype(float)
+data["Mass_1"] = pd.to_numeric(data["Mass_1"], downcast='float')
+data["Mass_1"] = 0.000954588*data["Mass_1"]
 
-data.to_csv("dwarf_Final.csv")
+data.to_csv("dwarf_Final.csv" , index = False)
 
 import csv
 

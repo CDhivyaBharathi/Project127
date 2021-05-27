@@ -23,19 +23,19 @@ for tr in rows:
 
 
 
-Star_names = []
-Distance =[]
-Mass = []
-Radius =[]
+Star_names_1 = []
+DIstance_1 =[]
+Mass_1 = []
+Radius_1 =[]
 
 
 for i in range(1,len(temp_list)):
-    Star_names.append(temp_list[i][0])
-    Distance.append(temp_list[i][5])
-    Mass.append(temp_list[i][7])
-    Radius.append(temp_list[i][8])
+    Star_names_1.append(temp_list[i][0])
+    DIstance_1.append(temp_list[i][5])
+    Mass_1.append(temp_list[i][7])
+    Radius_1.append(temp_list[i][8])
 
-df = pd.DataFrame(list(zip(Star_names,Distance,Mass,Radius,)),columns=['Star_name','Distance','Mass','Radius'])
+df = pd.DataFrame(list(zip(Star_names_1,DIstance_1,Mass_1,Radius_1,)),columns=['Star_name_1','Distance_1','Mass_1','Radius_1'])
 print(df)
 
 df.to_csv('dwarf.csv' , index=False)
