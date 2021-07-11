@@ -4,6 +4,7 @@ import csv
 
 df = pd.read_csv("ALL_STARS.csv")
 
+
 del df["Star_Names"]
 del df["Distance"]
 del df["Mass"]
