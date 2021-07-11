@@ -5,10 +5,12 @@ import csv
 df = pd.read_csv("ALL_STARS.csv")
 
 
+
 del df["Star_Names"]
 del df["Distance"]
 del df["Mass"]
 del df["Radius"]
+
 
 df = df.rename({
    "Star_name_1" : "Star_name",
@@ -17,4 +19,7 @@ df = df.rename({
    "Mass_1" : "Mass"
 } , axis="columns")
 
-df.to_csv("Final.csv" , index = False)
+
+new_df = df.dropna()
+new_df.to_csv("Final.csv" , index = False)
+
